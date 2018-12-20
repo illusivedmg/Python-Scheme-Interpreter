@@ -173,8 +173,6 @@ def realEval(exp,rho):
             else:
                 currEnv = currEnv.enclosed
 
-    ###############
-
     elif isinstance(exp, ast.ApExp):
         if exp.op == 'if':
             if isinstance(eval(exp.args[0], rho), ast.NilSxp):
